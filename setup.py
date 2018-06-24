@@ -8,6 +8,8 @@ setup(
     author = 'Yucklys',
     author_email = 'yucklys687@outlook.com',
     license = 'MIT',
+    zip_safe = True,
+    include_package_data = True,
     install_requires = [
         'requests',
         'beautifulsoup4',
