@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Yuci-Dictionary
+Version: 0.1.1
+Summary: A tiny CLI dictionary built by python, based on youdao-web dictionary and require an internet connection.
+Home-page: https://github.com/Yucklys/nontype-dictionary
+Author: Yucklys
+Author-email: yucklys687@outlook.com
+License: MIT
+Description: # nontype dictionary
+        
+        A tiny CLI dictionary built by python, based on youdao-web dictionary and require an internet connection. 
+        
+        
+Keywords: python youdao terminal
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

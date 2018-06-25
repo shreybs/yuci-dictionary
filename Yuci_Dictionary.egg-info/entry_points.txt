@@ -1,0 +1,3 @@
+[console_scripts]
+dict = dictionary.yuci_dictionary_youdao:main
+

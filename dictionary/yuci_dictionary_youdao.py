@@ -3,12 +3,10 @@ import requests
 import re
 import argparse as ap
 
-
 parser = ap.ArgumentParser(description='test')
 parser.add_argument('-w','--word', action='store', type=str)
 parser.add_argument('-n','--deepth',action='store', type=int, default=5)
 args = parser.parse_args()
-
 
 class youdao_dict(object):
     def __init__(self, word, deepth=5):
@@ -55,8 +53,10 @@ class youdao_dict(object):
             example = re.split('/', example)
             print('| ', example[0]+'\n'+example[1])
 
+def main():
+    a = youdao_dict((args.word),(args.deepth))
+    a.website_capture()
+    a.show()
 
-
-a = youdao_dict((args.word),(args.deepth))
-a.website_capture()
-a.show()
+if __name__ == '__main__':
+    main()
