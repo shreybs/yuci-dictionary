@@ -2,11 +2,10 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import argparse as ap
+import argument
 
-parser = ap.ArgumentParser(description='test')
-parser.add_argument('-w','--word', action='store', type=str)
-parser.add_argument('-n','--deepth',action='store', type=int, default=5)
-args = parser.parse_args()
+args = argument.get_argument()
+
 
 class youdao_dict(object):
     def __init__(self, word, deepth=5):
@@ -24,7 +23,7 @@ class youdao_dict(object):
         self.example = self.soup.find(
             name='div', attrs={'id': 'examplesToggle'})
 
-    def show(self):
+    def display(self):
         count = 0
         print('=============\n'+self.word+'\n=============')
         # 打印所有中文释义
@@ -56,7 +55,7 @@ class youdao_dict(object):
 def main():
     a = youdao_dict((args.word),(args.deepth))
     a.website_capture()
-    a.show()
+    a.display()
 
 if __name__ == '__main__':
     main()
