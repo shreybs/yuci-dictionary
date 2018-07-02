@@ -3,9 +3,13 @@ import requests
 import re
 import argparse as ap
 import argument
+from error_handler import *
 
+# 命令行输入
 args = argument.get_argument()
 
+# 检查异常
+Input_check(args.word)
 
 class youdao_dict(object):
     def __init__(self, word, deepth=5):
